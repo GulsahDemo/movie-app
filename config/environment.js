@@ -20,6 +20,21 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    }, 
+    TMDB: {
+      api_key: 'cb30ecbcb557b171232671908b517759',
+      api_host: 'https://api.themoviedb.org',
+      api_namespace_movie: '3/movie',
+      api_namespace_genre: '3/genre/movie',
+      api_namespace_search: '3/search',
+      api_img_url: 'http://image.tmdb.org/t/p/w500/'
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' http://ember.dev:35729",
+      'connect-src': "'self' ws://ember.dev:35729 http://api.themoviedb.org/ https://api.themoviedb.org/",
+      'img-src': "'self' http://image.tmdb.org/ https://image.tmdb.org/",
+      'media-src': "'self'"
     }
   };
 

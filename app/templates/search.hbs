@@ -1,0 +1,7 @@
+{{#if model}}
+  {{#each model as |movie|}}
+    <Card @movie = {{movie}} />
+  {{/each}}
+{{else}}
+  <div class="empty"><h1>Search results aren't found</h1></div>
+{{/if}}
